@@ -12,7 +12,7 @@ avg = avg.map(function(ret) {return ret.avg})``
    `` avg_alaska = avg_alaska.map(function(ret) { return ret.avg_alaska} )``
    `` var avg_ceil = Math.ceil(+avg+ +avg_alaska)`` - результат 62
    
- 4.**Начиная от Math.ceil(avg + avg_alaska) найти первого человека с другом по имени Деннис**
+4.**Начиная от Math.ceil(avg + avg_alaska) найти первого человека с другом по имени Деннис**
 ``var dennis_friend = db.users.findOne({$and: [{"index" : { $gt : avg_ceil}}, {"friends.name": /Dennis/}]})`` -- 
 ``var state = dennis_friend.address.split(',')[2]`` - штат Utah
 
