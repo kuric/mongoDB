@@ -5,9 +5,9 @@ MongoDB
 
 2. **Найти средний возраст людей в системе**
 
-``var avg = db.users.aggregate({ "$group": { _id: null, avg: { "$avg": "$age" }}})``` -- результат { "_id" : null, "avg" : 30.38862559241706 }
+``var avg = db.users.aggregate({ "$group": { _id: null, avg: { "$avg": "$age" }}})`` -- результат { "_id" : null, "avg" : 30.38862559241706 }
 
-avg = avg.map(function(ret) {return ret.avg})``
+``avg = avg.map(function(ret) {return ret.avg})``
 
 3.  **Найти средний возраст в штате Аляска**
 
